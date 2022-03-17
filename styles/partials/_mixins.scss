@@ -15,24 +15,20 @@
   flex-wrap: $fw;
 }
 
-// Break points
+// Media query 
 
 @mixin mobile {
-    @media screen
-    and (max-width: $tablet-break - 1) {
+    @media only screen and (max-width: $mobileBp) {
       @content;
     }
   }
   @mixin tablet {
-    @media screen
-    and (min-width: $tablet-break)
-    and (max-width: $desktop-break - 1) {
+    @media only screen and (min-width: $tabletBp) and (max-width: 1279px) {
       @content;
     }
   }
   @mixin desktop {
-    @media screen
-    and (min-width: $desktop-break) {
+    @media only screen and (min-width: $desktopBp) {
       @content;
     }
   }

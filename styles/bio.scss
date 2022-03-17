@@ -1,12 +1,11 @@
-//@use './partials/fonts' as *;
+@use './partials/breakpoints' as *;
+@use './partials/fonts' as *;
+@use './partials/colors' as *;
+@use './partials/mixins' as *;
 
-/* * {
+* {
     font-family: 'AvenirNext LT Pro', serif;
-}*/
-
-@import "./partials/mixins";
-@import "./partials/variables";
-@import "./partials/fonts";
+}
 
 body {
   margin: 0;
@@ -104,7 +103,7 @@ main {
 .hero {
     @include flex(flex-start, center);
     background-image: url("../assets/images/hero-bio.jpg");
-    filter: grayscale(70%);
+    filter: grayscale(75%);
     background-size: cover;
   
     @include mobile {
