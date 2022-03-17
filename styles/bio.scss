@@ -70,7 +70,7 @@ main {
   }
 
   &__nav-link {
-    @include font-styling(300, $silver);
+    @include font-styling(600, $silver);
     @include flex(center, center, border-box);
     text-decoration: none;
     font-size: 0.875rem;
@@ -120,7 +120,7 @@ main {
     }
   
     &__heading {
-      @include font-styling(500, white);
+      @include font-styling(700, white);
       width: 576px;
   
       @include mobile {
@@ -154,7 +154,7 @@ main {
     }
   
     &__heading {
-      @include font-styling(500);
+      @include font-styling(700);
       width: 100%;
   
       @include mobile {
@@ -189,10 +189,10 @@ main {
     }
   
     &__quote, &__subheading {
-      @include font-styling(500);
+      @include font-styling(700);
   
       @include mobile {
-        font-weight: 300;
+        font-weight: 600;
         @include format-text(1.375rem, 1.5rem 0 0 0);
       }
   
@@ -206,7 +206,7 @@ main {
     }
   
     &__author {
-      @include font-styling(300, black);
+      @include font-styling(600, black);
   
       @include mobile {
         @include format-text(1.25rem, 2rem 0 1rem 0, 0.875rem);
@@ -239,7 +239,7 @@ main {
     }
   
     &__description {
-      @include font-styling(100, $black);
+      @include font-styling(400, $black);
       @include format-text(1.25rem, 0, 0.875rem);
   
       @include mobile {
@@ -274,7 +274,7 @@ main {
     }
   
     &__heading {
-      @include font-styling(500);
+      @include font-styling(700);
   
       @include mobile {
         @include format-text(2rem, 2rem 0 0.5rem 0, 1.5rem);
@@ -335,7 +335,7 @@ main {
     }
   
     &__heading {
-      @include font-styling(500, white);
+      @include font-styling(700, white);
       width: 14rem;
   
       @include mobile {
@@ -410,7 +410,7 @@ main {
     }
   
     &__name, &__company {
-      @include font-styling(300, white);
+      @include font-styling(600, white);
       @include format-text(1.5rem, 0);
   
       @include mobile {
@@ -427,7 +427,7 @@ main {
     }
   
     &__address, &__booking {
-      @include font-styling(100, white);
+      @include font-styling(400, white);
       @include format-text(1.25rem, 0, 0.875rem);
   
       @include mobile {
@@ -437,7 +437,7 @@ main {
     }
   
     &__email {
-      @include font-styling(100, white);
+      @include font-styling(400, white);
     
       @include mobile {
         @include format-text(1.25rem, 1rem 0 0 0, 0.75rem);
@@ -469,7 +469,7 @@ main {
     }
   
     &__text {
-      @include font-styling(100, white);
+      @include font-styling(400, white);
       @include format-text(1.25rem, 0, 0.875rem);
   
       @include mobile {

@@ -4,21 +4,21 @@
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: 100;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: 300;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: 500;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -97,7 +97,7 @@ main {
 }
 .page-heading__nav-link {
   font-family: "AvenirNext";
-  font-weight: 300;
+  font-weight: 600;
   color: #afafaf;
   display: flex;
   justify-content: center;
@@ -162,7 +162,7 @@ main {
 }
 .hero__heading {
   font-family: "AvenirNext";
-  font-weight: 500;
+  font-weight: 700;
   color: white;
   width: 576px;
 }
@@ -214,7 +214,7 @@ main {
 }
 .main__heading {
   font-family: "AvenirNext";
-  font-weight: 500;
+  font-weight: 700;
   color: #323232;
   width: 100%;
 }
@@ -263,12 +263,12 @@ main {
 }
 .main__quote, .main__subheading {
   font-family: "AvenirNext";
-  font-weight: 500;
+  font-weight: 700;
   color: #323232;
 }
 @media screen and (max-width: 767px) {
   .main__quote, .main__subheading {
-    font-weight: 300;
+    font-weight: 600;
     font-size: 1rem;
     line-height: 1.375rem;
     margin: 1.5rem 0 0 0;
@@ -290,7 +290,7 @@ main {
 }
 .main__author {
   font-family: "AvenirNext";
-  font-weight: 300;
+  font-weight: 600;
   color: black;
 }
 @media screen and (max-width: 767px) {
@@ -340,7 +340,7 @@ main {
 }
 .main__description {
   font-family: "AvenirNext";
-  font-weight: 100;
+  font-weight: 400;
   color: #323232;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -391,7 +391,7 @@ main {
 }
 .gallery__heading {
   font-family: "AvenirNext";
-  font-weight: 500;
+  font-weight: 700;
   color: #323232;
 }
 @media screen and (max-width: 767px) {
@@ -482,7 +482,7 @@ main {
 }
 .footer__heading {
   font-family: "AvenirNext";
-  font-weight: 500;
+  font-weight: 700;
   color: white;
   width: 14rem;
 }
@@ -579,7 +579,7 @@ main {
 }
 .contact-card__name, .contact-card__company {
   font-family: "AvenirNext";
-  font-weight: 300;
+  font-weight: 600;
   color: white;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -602,7 +602,7 @@ main {
 }
 .contact-card__address, .contact-card__booking {
   font-family: "AvenirNext";
-  font-weight: 100;
+  font-weight: 400;
   color: white;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -616,7 +616,7 @@ main {
 }
 .contact-card__email {
   font-family: "AvenirNext";
-  font-weight: 100;
+  font-weight: 400;
   color: white;
 }
 @media screen and (max-width: 767px) {
@@ -661,7 +661,7 @@ main {
 }
 .copyright__text {
   font-family: "AvenirNext";
-  font-weight: 100;
+  font-weight: 400;
   color: white;
   font-size: 0.875rem;
   line-height: 1.25rem;
