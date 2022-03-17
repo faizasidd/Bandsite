@@ -50,3 +50,20 @@
     margin: $m;
   }
   
+// Animations
+
+@mixin scale-logo {
+    transition: transform .5s ease-out;
+  
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+  
+  @mixin color-image {
+    transition: filter .25s ease-out;
+  
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }

@@ -6,6 +6,7 @@
 
 @import "./partials/mixins";
 @import "./partials/variables";
+@import "./partials/fonts";
 
 body {
   margin: 0;
@@ -17,6 +18,10 @@ body {
 li {
   list-style-type: none;
 }
+
+main {
+  margin-top: 5rem;
+  }
 
 .page-heading {
   @include flex($ai: center, $bx: border-box);
@@ -96,3 +101,38 @@ li {
   }
 }
 
+.hero {
+    @include flex(flex-start, center);
+    background-image: url("../assets/images/hero-bio.jpg");
+    background-size: cover;
+  
+    @include mobile {
+      height: calc(.57*(100vw));
+    }
+  
+    @include tablet {
+      height: calc(.52*(100vw));
+    }
+  
+    @include desktop {
+      height: calc(.56*(100vw));
+    }
+  
+    &__heading {
+      @include font-styling(500, white);
+      width: 576px;
+  
+      @include mobile {
+        @include format-text(2rem, 0 1rem, 1.5rem);
+        width: 75%; 
+      }
+  
+      @include tablet {
+        @include format-text(4.25rem, 0 1.5rem, 3.75rem);
+      }
+  
+      @include desktop {
+        @include format-text(4.25rem, 0 9.375rem, 3.75rem);
+      }
+    }
+  }
