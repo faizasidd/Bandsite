@@ -1,0 +1,52 @@
+// Flex box
+
+@mixin flex(
+  $jc: flex-start,
+  $ai: stretch,
+  $bx: content-box,
+  $fd: row,
+  $fw: nowrap
+) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  box-sizing: $bx;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+
+// Break points
+
+@mixin mobile {
+    @media screen
+    and (max-width: $tablet-break - 1) {
+      @content;
+    }
+  }
+  @mixin tablet {
+    @media screen
+    and (min-width: $tablet-break)
+    and (max-width: $desktop-break - 1) {
+      @content;
+    }
+  }
+  @mixin desktop {
+    @media screen
+    and (min-width: $desktop-break) {
+      @content;
+    }
+  }
+
+// Typography
+
+@mixin font-styling($fw, $c: $black) {
+    font-family: "AvenirNext";
+    font-weight: $fw;
+    color: $c;
+  }
+  @mixin format-text($lh, $m, $fs: 1rem) {
+    font-size: $fs;
+    line-height: $lh;
+    margin: $m;
+  }
+  
