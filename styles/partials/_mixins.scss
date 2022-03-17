@@ -3,14 +3,14 @@
 @mixin flex(
   $jc: flex-start,
   $ai: stretch,
-  $bx: content-box,
+  $bs: content-box,
   $fd: row,
   $fw: nowrap
 ) {
   display: flex;
   justify-content: $jc;
   align-items: $ai;
-  box-sizing: $bx;
+  box-sizing: $bs;
   flex-direction: $fd;
   flex-wrap: $fw;
 }

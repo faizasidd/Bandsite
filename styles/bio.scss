@@ -1,8 +1,8 @@
 //@use './partials/fonts' as *;
 
-* {
+/* * {
     font-family: 'AvenirNext LT Pro', serif;
-}
+}*/
 
 @import "./partials/mixins";
 @import "./partials/variables";
@@ -24,7 +24,7 @@ main {
   }
 
 .page-heading {
-  @include flex($ai: center, $bx: border-box);
+  @include flex($ai: center, $bs: border-box);
   position: fixed;
   top: 0;
   left: 0;
@@ -257,7 +257,7 @@ main {
   }
 
   .gallery {
-    @include flex($bx: border-box, $fd: column);
+    @include flex($bs: border-box, $fd: column);
     background-color: $alabaster;
     width: 100%;
   
@@ -302,6 +302,178 @@ main {
       @include mobile {
         width: 100%;
         margin-top: 1rem;
+      }
+    }
+  }
+ 
+  .footer {
+    @include flex($fw: wrap);
+    background-color: $black;
+  
+    @include mobile {
+      flex-direction: column;
+      padding: 0 0.75rem 2.5rem 0.75rem;
+    }
+  
+    @include tablet {
+      padding: 0 1.5rem;
+    }
+  
+    @include desktop {
+      padding: 0 9.375rem;
+    }
+  
+    &__first-row {
+      @include flex($jc: space-between, $ai: center);
+      margin: 3rem 0;
+      width: 100%;
+  
+      @include mobile {
+        margin: 2rem 0;
+        flex-wrap: wrap;
+      }
+    }
+  
+    &__heading {
+      @include font-styling(500, white);
+      width: 14rem;
+  
+      @include mobile {
+        @include format-text(2rem, 0 0 1.5rem, 2rem);
+        width: 100%;
+      }
+  
+      @include tablet {
+        @include format-text(2.75rem, 0 1.5rem 0 0, 2.25rem);
+      }
+  
+      @include desktop {
+        @include format-text(2.75rem, 0 3.5rem 0 0, 2.25rem);
+      }
+    }
+  
+    &__icons {
+      @include flex($ai: center);
+      flex-grow: 1;
+  
+      @include mobile {
+        margin-left: 0.25rem;
+        width: 128px;
+        justify-content: space-between;
+        flex-grow: 0;
+      }
+    }
+  
+    &__icon {
+      width: 20px;
+      height: 20px;
+  
+      @include tablet {
+        padding: 0 0.75rem 0 1.5rem;
+      }
+  
+      @include desktop {
+        padding-right: 2rem;
+      }
+    }
+  
+    &__logo {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+  
+  .contact-cards {
+    @include flex(space-between);
+    width: 100%;
+  
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  
+  .contact-card {
+    width: 14rem;
+  
+    @include mobile {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    @include desktop {
+      margin-right: 3.5rem;
+      
+      &--right {
+        flex-grow: 1;
+      }
+    }
+  
+    &__name, &__company {
+      @include font-styling(300, white);
+      @include format-text(1.5rem, 0);
+  
+      @include mobile {
+        @include format-text(1.375, 0, 0.8125rem);
+      }
+    }
+  
+    &__company {
+      margin-bottom: 1rem;
+  
+      @include desktop {
+        margin-bottom: 1.5rem;
+      }
+    }
+  
+    &__address, &__booking {
+      @include font-styling(100, white);
+      @include format-text(1.25rem, 0, 0.875rem);
+  
+      @include mobile {
+        font-size: 0.75rem;
+        line-height: 1.125rem;
+      }
+    }
+  
+    &__email {
+      @include font-styling(100, white);
+    
+      @include mobile {
+        @include format-text(1.25rem, 1rem 0 0 0, 0.75rem);
+      }
+  
+      @include tablet {
+        @include format-text(1.25rem, 1.5rem 0 0 0, 0.875rem);
+      }
+  
+      @include desktop {
+        @include format-text(1.5rem, 1.5rem 0 0 0);
+      }
+    }
+  }
+  
+  .copyright {
+    display: flex;
+    
+    @include mobile {
+      flex-wrap: wrap;
+    }
+  
+    @include tablet {
+      margin: 2.25rem 0;
+    }
+  
+    @include desktop {
+      margin: 2.5rem 0;
+    }
+  
+    &__text {
+      @include font-styling(100, white);
+      @include format-text(1.25rem, 0, 0.875rem);
+  
+      @include mobile {
+        @include format-text(1.125rem, 0, 0.75rem);
       }
     }
   }
