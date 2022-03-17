@@ -1,4 +1,4 @@
-@use './partials/fonts' as *;
+//@use './partials/fonts' as *;
 
 * {
     font-family: 'AvenirNext LT Pro', serif;
@@ -104,6 +104,7 @@ main {
 .hero {
     @include flex(flex-start, center);
     background-image: url("../assets/images/hero-bio.jpg");
+    filter: grayscale(70%);
     background-size: cover;
   
     @include mobile {
@@ -251,6 +252,56 @@ main {
   
       @include desktop {
         width: calc((100% - 2.5rem)/2);
+      }
+    }
+  }
+
+  .gallery {
+    @include flex($bx: border-box, $fd: column);
+    background-color: $alabaster;
+    width: 100%;
+  
+    @include mobile {
+      padding: 0 1rem 2.5rem 1rem;
+    }
+  
+    @include tablet {
+      padding: 0 1.5rem 2.5rem 1.5rem;
+    }
+  
+    @include desktop {
+      padding: 0 9.375rem 2.5rem 9.375rem;
+    }
+  
+    &__heading {
+      @include font-styling(500);
+  
+      @include mobile {
+        @include format-text(2rem, 2rem 0 0.5rem 0, 1.5rem);
+      }
+  
+      @include tablet {
+        @include format-text(2.75rem, 3rem 0 2rem 0, 2.25rem);
+      }
+  
+      @include desktop {
+        @include format-text(2.75rem, 3rem 0 2.625rem 0, 2.25rem);
+      }
+    }
+  
+    &__imgs {
+      @include flex($jc: space-between, $fw: wrap);
+    }
+  
+    &__img {
+      @include color-image;
+      width: calc((100% - 3rem) /3);
+      height: calc((100% - 4.5rem) /3);
+      margin-top: 1.5rem;
+  
+      @include mobile {
+        width: 100%;
+        margin-top: 1rem;
       }
     }
   }
