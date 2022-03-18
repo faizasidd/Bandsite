@@ -41,11 +41,10 @@ main {
   }
 
   @include desktop {
-    padding: 0 9.375rem;
+    padding: 0 9.3rem;
   }
 
   &__logo {
-    @include scale-logo;
     display: inline-block;
 
     @include mobile {
@@ -293,7 +292,6 @@ main {
     }
   
     &__img {
-      @include color-image;
       width: calc((100% - 3rem) /3);
       height: calc((100% - 4.5rem) /3);
       margin-top: 1.5rem;
