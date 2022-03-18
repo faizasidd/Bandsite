@@ -51,7 +51,7 @@ main {
   z-index: 2;
   background-color: #323232;
   width: 100%;
-  height: 80px;
+  height: 95px;
 }
 @media only screen and (max-width: 767px) {
   .page-heading {
@@ -103,7 +103,7 @@ main {
   flex-direction: row;
   flex-wrap: nowrap;
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 @media only screen and (max-width: 767px) {
   .page-heading__nav-link {
@@ -138,23 +138,23 @@ main {
   box-sizing: content-box;
   flex-direction: row;
   flex-wrap: nowrap;
-  background-image: url("../assets/images/hero-bio.jpg");
-  filter: grayscale(50%);
+  filter: grayscale(70%);
   background-size: cover;
+  background-position: center;
 }
 @media only screen and (max-width: 767px) {
   .hero {
-    height: 57vw;
+    height: 57vh;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
   .hero {
-    height: 52vw;
+    height: 52vh;
   }
 }
 @media only screen and (min-width: 1280px) {
   .hero {
-    height: 56vw;
+    height: 56vh;
   }
 }
 .hero__heading {
@@ -165,7 +165,7 @@ main {
 }
 @media only screen and (max-width: 767px) {
   .hero__heading {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 2rem;
     margin: 0 1rem;
     width: 75%;
