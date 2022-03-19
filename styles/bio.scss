@@ -23,7 +23,7 @@ main {
   }
 
 .page-heading {
-  @include flex($ai: center, $bs: border-box);
+  @include flex($align-items: center, $box-sizing: border-box);
   position: fixed;
   top: 0;
   left: 0;
@@ -139,7 +139,7 @@ main {
   }
 
   .main {
-    @include flex($jc: center, $fd: column);
+    @include flex($justify-content: center, $flex-direction: column);
   
     @include mobile {
       padding: 0 1.5rem;
@@ -249,7 +249,7 @@ main {
   }
 
   .gallery {
-    @include flex($bs: border-box, $fd: column);
+    @include flex($box-sizing: border-box, $flex-direction: column);
     background-color: $alabaster;
     width: 100%;
   
@@ -282,7 +282,7 @@ main {
     }
   
     &__imgs {
-      @include flex($jc: space-between, $fw: wrap);
+      @include flex($justify-content: space-between, $flex-wrap: wrap);
     }
   
     &__img {
@@ -298,7 +298,7 @@ main {
   }
  
   .footer {
-    @include flex($fw: wrap);
+    @include flex($flex-wrap: wrap);
     background-color: $black;
   
     @include mobile {
@@ -315,7 +315,7 @@ main {
     }
   
     &__first-row {
-      @include flex($jc: space-between, $ai: center);
+      @include flex($justify-content: space-between, $align-items: center);
       margin: 3rem 0;
       width: 100%;
   
@@ -344,7 +344,7 @@ main {
     }
   
     &__icons {
-      @include flex($ai: center);
+      @include flex($align-items: center);
       flex-grow: 1;
   
       @include mobile {

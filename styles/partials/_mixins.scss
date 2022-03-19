@@ -4,18 +4,18 @@
 // Flex box
 
 @mixin flex(
-  $jc: flex-start,
-  $ai: stretch,
-  $bs: content-box,
-  $fd: row,
-  $fw: nowrap
+  $justify-content: flex-start,
+  $align-items: stretch,
+  $box-sizing: content-box,
+  $flex-direction: row,
+  $flex-wrap: nowrap
 ) {
   display: flex;
-  justify-content: $jc;
-  align-items: $ai;
-  box-sizing: $bs;
-  flex-direction: $fd;
-  flex-wrap: $fw;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  box-sizing: $box-sizing;
+  flex-direction: $flex-direction;
+  flex-wrap: $flex-wrap;
 }
 
 // Media query 
