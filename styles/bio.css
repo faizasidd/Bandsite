@@ -124,11 +124,11 @@ main {
   }
 }
 .page-heading__nav-link--selected {
-  color: white;
-  border-bottom: 3px solid white;
+  color: #ffffff;
+  border-bottom: 3px solid #ffffff;
 }
 .page-heading__nav-link:hover {
-  color: white;
+  color: #ffffff;
 }
 
 .hero {
@@ -139,31 +139,41 @@ main {
   flex-direction: row;
   flex-wrap: nowrap;
   background-image: url("../assets/images/hero-bio.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
+  position: relative;
+  background-position: 90%;
+  height: 25vh;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 0.5);
+  top: 0;
+  left: 0;
 }
 @media only screen and (max-width: 767px) {
   .hero {
-    height: 57vh;
-    filter: grayscale(70%);
+    height: 25vh;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
   .hero {
     height: 52vh;
-    filter: grayscale(50%);
   }
 }
 @media only screen and (min-width: 1280px) {
   .hero {
     height: 56vh;
-    filter: grayscale(50%);
   }
 }
 .hero__heading {
   font-family: "AvenirNext LT Pro";
   font-weight: 700;
-  color: white;
+  color: #ffffff;
   width: 576px;
+  z-index: 1;
 }
 @media only screen and (max-width: 767px) {
   .hero__heading {
@@ -468,7 +478,7 @@ main {
 .footer__heading {
   font-family: "AvenirNext LT Pro";
   font-weight: 700;
-  color: white;
+  color: #ffffff;
   width: 14rem;
 }
 @media only screen and (max-width: 767px) {
@@ -524,12 +534,6 @@ main {
     padding-right: 2rem;
   }
 }
-@media only screen and (max-width: 767px) {
-  .footer__logo {
-    display: none;
-  }
-}
-
 .contact-cards {
   display: flex;
   justify-content: space-between;
@@ -565,7 +569,7 @@ main {
 .contact-card__name, .contact-card__company {
   font-family: "AvenirNext LT Pro";
   font-weight: 600;
-  color: white;
+  color: #ffffff;
   font-size: 1rem;
   line-height: 1.5rem;
   margin: 0;
@@ -588,7 +592,7 @@ main {
 .contact-card__address, .contact-card__booking {
   font-family: "AvenirNext LT Pro";
   font-weight: 400;
-  color: white;
+  color: #ffffff;
   font-size: 0.875rem;
   line-height: 1.25rem;
   margin: 0;
@@ -599,10 +603,19 @@ main {
     line-height: 1.125rem;
   }
 }
+@media only screen and (min-width: 1280px) {
+  .contact-card__address {
+    display: inline-block;
+    border: 1px #000000 solid;
+  }
+  .contact-card__address::after {
+    border: none;
+  }
+}
 .contact-card__email {
   font-family: "AvenirNext LT Pro";
   font-weight: 400;
-  color: white;
+  color: #ffffff;
 }
 @media only screen and (max-width: 767px) {
   .contact-card__email {
@@ -629,11 +642,6 @@ main {
 .copyright {
   display: flex;
 }
-@media only screen and (max-width: 767px) {
-  .copyright {
-    flex-wrap: wrap;
-  }
-}
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
   .copyright {
     margin: 2.25rem 0;
@@ -647,7 +655,7 @@ main {
 .copyright__text {
   font-family: "AvenirNext LT Pro";
   font-weight: 400;
-  color: white;
+  color: #ffffff;
   font-size: 0.875rem;
   line-height: 1.25rem;
   margin: 0;
@@ -657,5 +665,7 @@ main {
     font-size: 0.75rem;
     line-height: 1.125rem;
     margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }/*# sourceMappingURL=bio.css.map */
