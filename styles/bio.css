@@ -534,6 +534,12 @@ main {
     padding-right: 2rem;
   }
 }
+@media only screen and (max-width: 767px) {
+  .footer__logo {
+    display: none;
+  }
+}
+
 .contact-cards {
   display: flex;
   justify-content: space-between;
@@ -636,6 +642,20 @@ main {
     font-size: 1rem;
     line-height: 1.5rem;
     margin: 1.5rem 0 0 0;
+  }
+}
+
+.bandsite__logo {
+  margin-bottom: 0.625rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .bandsite__logo {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .bandsite__logo {
+    display: none;
   }
 }
 

@@ -381,6 +381,7 @@ main {
   
     &__logo {
       @include mobile {
+      display: none;
       }
     }
   }
@@ -465,11 +466,23 @@ main {
     }
   }
   
+  .bandsite__logo {
+   margin-bottom: 0.625rem;
+
+     @include tablet {
+      display: none;
+     }
+
+     @include desktop {
+      display: none;
+     }
+  }
+  
   .copyright {
     display: flex;
   
     @include tablet {
-      margin: 2.25rem 0;
+     margin: 2.25rem 0;
     }
   
     @include desktop {
