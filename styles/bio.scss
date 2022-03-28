@@ -130,7 +130,7 @@ main {
     }
   
     &__heading {
-      @include font-styling(700, $white);
+      @include font-styling(600, $white);
       width: 576px;
       z-index: 1;
   
