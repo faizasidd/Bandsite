@@ -8,14 +8,14 @@
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -223,7 +223,7 @@ main {
 }
 .main__heading {
   font-family: "AvenirNext LT Pro";
-  font-weight: 700;
+  font-weight: 600;
   color: #323232;
   width: 100%;
 }
@@ -390,7 +390,7 @@ main {
 }
 .gallery__heading {
   font-family: "AvenirNext LT Pro";
-  font-weight: 700;
+  font-weight: 600;
   color: #323232;
 }
 @media only screen and (max-width: 767px) {
@@ -477,7 +477,7 @@ main {
 }
 .footer__heading {
   font-family: "AvenirNext LT Pro";
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   width: 14rem;
 }
@@ -589,6 +589,7 @@ main {
 }
 .contact-card__company {
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 @media only screen and (min-width: 1280px) {
   .contact-card__company {
@@ -607,15 +608,6 @@ main {
   .contact-card__address, .contact-card__booking {
     font-size: 0.75rem;
     line-height: 1.125rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .contact-card__address {
-    display: inline-block;
-    border: 1px #000000 solid;
-  }
-  .contact-card__address::after {
-    border: none;
   }
 }
 .contact-card__email {

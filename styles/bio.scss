@@ -165,7 +165,7 @@ main {
     }
   
     &__heading {
-      @include font-styling(700);
+      @include font-styling(600);
       width: 100%;
   
       @include mobile {
@@ -277,7 +277,7 @@ main {
     }
   
     &__heading {
-      @include font-styling(700);
+      @include font-styling(600);
   
       @include mobile {
         @include format-text(2rem, 2rem 0 0.5rem 0, 1.5rem);
@@ -337,7 +337,7 @@ main {
     }
   
     &__heading {
-      @include font-styling(700, $white);
+      @include font-styling(600, $white);
       width: 14rem;
   
       @include mobile {
@@ -422,6 +422,7 @@ main {
   
     &__company {
       margin-bottom: 1rem;
+      white-space:nowrap;
   
       @include desktop {
         margin-bottom: 1.5rem;
@@ -437,17 +438,6 @@ main {
         line-height: 1.125rem;
       }
     }
-
-    &__address {
-      @include desktop { 
-        display:inline-block;
-        border: 1px $darkblack solid;
-      
-      &::after {
-        border:none;
-      }
-    }
-  }
   
     &__email {
       @include font-styling(400, $white);

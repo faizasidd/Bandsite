@@ -8,14 +8,14 @@
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
-  font-weight: 600;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "AvenirNext LT Pro";
   src: url("../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -27,15 +27,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  box-sizing: content-box;
-  flex-direction: row;
+  box-sizing: border-box;
+  flex-direction: column;
   flex-wrap: nowrap;
   background-image: url("../assets/images/hero-shows.jpg");
   background-size: cover;
+  background-position: center;
+  padding: 2.5rem 1rem 0 1rem;
   position: relative;
-  background-position: 90%;
-  height: 30rem;
-  padding: 4rem 1rem 0 1rem;
 }
 .shows-hero::after {
   content: "";
@@ -55,6 +54,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 6rem 1.5rem 4rem 1.5rem;
+    height: 35rem;
   }
 }
 @media only screen and (min-width: 1280px) {
@@ -65,7 +65,8 @@
     box-sizing: border-box;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 10rem 9.375rem 0 9.375rem;
+    padding: 14rem 9.375rem 0 9.4rem;
+    height: 50rem;
   }
 }
 .shows-hero__container {
@@ -80,17 +81,11 @@
   font-family: "AvenirNext LT Pro";
   font-weight: 500;
   color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  margin: 0 0 1.5rem 0;
   width: 100%;
-}
-@media only screen and (max-width: 767px) {
-  .shows-hero__album {
-    font-family: "AvenirNext LT Pro";
-    font-weight: 300;
-    color: #ffffff;
-    font-size: 0.875rem;
-    line-height: 1.375rem;
-    margin: 0 0 1.5rem 0;
-  }
+  z-index: 1;
 }
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
   .shows-hero__album {
@@ -103,17 +98,18 @@
   .shows-hero__album {
     font-size: 1.5rem;
     line-height: 2rem;
-    margin: 0 0 3rem 0;
+    margin: 0 0 -0.5rem 0;
   }
 }
 .shows-hero__heading {
   font-family: "AvenirNext LT Pro";
   font-weight: 500;
   color: #ffffff;
-  font-size: 2.25rem;
+  font-size: 1.9rem;
   line-height: 2.75rem;
   margin: 0;
   width: 100%;
+  z-index: 1;
 }
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
   .shows-hero__heading {
@@ -125,25 +121,27 @@
 }
 @media only screen and (min-width: 1280px) {
   .shows-hero__heading {
-    font-size: 3rem;
+    font-size: 3.5rem;
     line-height: 3.75rem;
     margin: 0;
-    width: 28.125rem;
-    margin-bottom: -0.8rem;
+    width: 28rem;
+    margin-bottom: 3rem;
   }
 }
 .shows-hero__soundcloud {
   width: 100%;
-  height: 8rem;
-  margin-top: 1.5rem;
+  height: 6rem;
+  margin: 1.5rem 0rem;
 }
 @media only screen and (min-width: 768px) and (max-width: 1279px) {
-  .shows-hero {
+  .shows-hero__soundcloud {
     width: 60%;
+    height: 9rem;
   }
 }
 @media only screen and (min-width: 1280px) {
-  .shows-hero {
+  .shows-hero__soundcloud {
     width: 45%;
+    height: 9.125rem;
   }
 }/*# sourceMappingURL=shows.css.map */

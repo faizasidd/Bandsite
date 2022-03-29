@@ -6,97 +6,88 @@
 * {
     font-family: 'AvenirNext LT Pro', serif;
 }
-
+   
 .shows-hero {
-    @include flex(flex-start, center);
+    @include flex($align-items: center, $flex-direction: column, $box-sizing: border-box);
     background-image: url("../assets/images/hero-shows.jpg");
     background-size: cover;
+    background-position: center;
+    padding: 2.5rem 1rem 0 1rem;
     position: relative;
-    background-position: 90%;
-    height: 30rem;
-    padding: 4rem 1rem 0 1rem;
-    
+
     &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: rgba($black, 0.5);
-      top: 0;
-      left: 0;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.5);
+    top: 0;
+    left: 0;
     }
-  
-    //@include tablet {
-    //  height: 52vh;
-   // }
-  
-   // @include desktop {
-    //  height: 56vh;
-  //  }
-    
-    //height: 41.875rem;
-  
+
     @include tablet {
-      @include flex($flex-wrap: wrap, $box-sizing: border-box);
-      padding: 6rem 1.5rem 4rem 1.5rem;
+    @include flex($flex-wrap: wrap, $box-sizing: border-box);
+    padding: 6rem 1.5rem 4rem 1.5rem;
+    height: 35rem;
     }
-  
+      
     @include desktop {
-      @include flex($align-items: flex-start, $flex-wrap: wrap, $box-sizing: border-box);
-      padding: 10rem 9.375rem 0 9.375rem;
+    @include flex($align-items: flex-start, $flex-wrap: wrap, $box-sizing: border-box);
+    padding: 14rem 9.375rem 0 9.4rem;
+    height: 50rem;
     }
-  
+      
     &__container {
       @include flex(space-between, flex-end, $flex-wrap: wrap);
     }
-  
+      
     &__album {
       @include font-styling(500, $white);
+      @include format-text(1.375rem, 0 0 1.5rem 0, 0.875rem);
       width: 100%;
-  
-      @include mobile {
-        @include font-styling(300, $white);
-        @include format-text(1.375rem, 0 0 1.5rem 0, 0.875rem);
-      }
-  
+      z-index: 1;
+      
       @include tablet {
-        @include format-text(2rem, $fs: 1.5rem);
-      }
-  
-      @include desktop {
-        @include format-text(2rem, 0 0 3rem 0, 1.5rem);
-      }
+      @include format-text(2rem, $fs: 1.5rem);
     }
-  
+      
+      @include desktop {
+      @include format-text(2rem, 0 0 -0.5rem 0, 1.5rem);
+    }
+    }
+      
     &__heading {
       @include font-styling(500, $white);
-      @include format-text(2.75rem, $fs: 2.25rem);
+      @include format-text(2.75rem, $fs: 1.9rem);
       width: 100%;
-  
+      z-index: 1;
+      
       @include tablet {
-        @include format-text(4.25rem, $fs: 3.75rem);
-        width: 80%;
+      @include format-text(4.25rem, $fs: 3.75rem);
+      width: 80%;
       }
-  
+      
       @include desktop {
-        @include format-text(3.75rem, $fs: 3rem);
-        width: 28.125rem;
-        margin-bottom: -.8rem; 
-      }
+      @include format-text(3.75rem, $fs: 3.5rem);
+      width: 28rem;
+      margin-bottom: 3rem;
     }
-  
+    }
+      
     &__soundcloud {
         width: 100%;
-        height: 8rem;
-        margin-top: 1.5rem;
-      }
-  
-      @include tablet {
+        height: 6rem;
+        margin: 1.5rem 0rem;
+      
+        @include tablet {
         width: 60%;
-      }
-  
-      @include desktop {
+        height: 9rem;
+        }
+      
+        @include desktop {
         width: 45%;
-      }
+        height: 9.125rem;
+        }
+        }
     }
-
+    
