@@ -596,6 +596,58 @@ main {
   width: calc(100% - 3.4375rem);
 }
 
+.btn {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 300;
+  color: #ffffff;
+  display: block;
+  border: none;
+  border-radius: 4px;
+  text-transform: uppercase;
+  padding: 0;
+}
+@media only screen and (max-width: 767px) {
+  .btn {
+    height: 3rem;
+    min-width: 14rem;
+    margin-left: 4rem;
+    flex-grow: 1;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .btn {
+    height: 3rem;
+    width: 12rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .btn {
+    height: 3rem;
+    width: 12rem;
+  }
+}
+.btn--comment {
+  background-color: #323232;
+}
+.btn--comment:hover {
+  background-color: #000000;
+}
+.btn--ticket {
+  background-color: #323232;
+  height: 3rem;
+  width: 10rem;
+  margin-left: calc(100% - 42.5rem);
+}
+@media only screen and (max-width: 767px) {
+  .btn--ticket {
+    width: 100%;
+    margin: 0.5rem 0 1rem 0;
+  }
+}
+.btn--ticket:hover {
+  background-color: #000000;
+}
+
 .com-form {
   display: flex;
   justify-content: flex-start;
