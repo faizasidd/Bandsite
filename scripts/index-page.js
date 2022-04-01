@@ -75,18 +75,20 @@ document.addEventListener('DOMContentLoaded', () => {
     commentForm.addEventListener('submit', e => {
         e.preventDefault(); // prevent Refresh
 
+        //Date
+        var date = new Date("April 01,2022");
+        var dateString = new Date(date.getTime() - (date.getTimezoneOffset() * 60000))
+            .toISOString()
+            .split("T")[0];
+
+        //console.log(dateString);
+
         commentsArray.push({
             author: e.target.name.value,
-            timestamp: new Date(),
+            timestamp: dateString,
             text: e.target.comment.value,
             img: ''
         });
-
-        // const year = date.getFullYear();
-        // const month = date.getMonth() + 1;
-        // const day = date.getDate();
-
-        // year.appendChild(month);
 
         e.target.comment.value = ''; // Clear the comment after posting
         e.target.name.value = ''; // Clear the name after posting
