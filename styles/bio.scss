@@ -422,6 +422,10 @@ main {
     }
   }
 
+  .comments__list {
+    display: inline-block;
+  }
+
   .btn {
     @include font-styling(300, $white);
     display: block;

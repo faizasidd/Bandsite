@@ -596,6 +596,10 @@ main {
   width: calc(100% - 3.4375rem);
 }
 
+.comments__list {
+  display: inline-block;
+}
+
 .btn {
   font-family: "AvenirNext LT Pro";
   font-weight: 300;
