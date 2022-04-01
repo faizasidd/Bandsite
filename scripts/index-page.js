@@ -68,4 +68,29 @@ const createElement = (elementType, className, content = '', src = '') => {
     return element;
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    displayComment();
+
+    const commentForm = document.querySelector('.com-form');
+    commentForm.addEventListener('submit', e => {
+        e.preventDefault(); // prevent Refresh
+
+        commentsArray.push({
+            author: e.target.name.value,
+            timestamp: new Date(),
+            text: e.target.comment.value,
+            img: ''
+        });
+
+        // const year = date.getFullYear();
+        // const month = date.getMonth() + 1;
+        // const day = date.getDate();
+
+        // year.appendChild(month);
+
+        e.target.comment.value = ''; // Clear the comment after posting
+        e.target.name.value = ''; // Clear the name after posting
+        displayComment();
+    });
+});
 
