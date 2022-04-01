@@ -1,4 +1,4 @@
-//Creates a reverse Array
+// Creates a reverse Array
 
 const commentsArray = [
     {
@@ -21,11 +21,11 @@ const commentsArray = [
     }
 ];
 
-//Creates HTML comment cards based off the above array
+// Creates HTML comment cards based off the above array
 
 const displayComment = () => {
     const commentContainer = document.querySelector('.comments__list');
-    commentContainer.innerHTML = ''; // wipe all comments and regenerate
+    commentContainer.innerHTML = ''; // Wipe all comments and regenerate
 
     for (let i = commentsArray.length - 1; i >= 0; i--) {
         const author = createElement('div',
@@ -48,7 +48,7 @@ const displayComment = () => {
     }
 }
 
-//  creates HTML element with classname, content and src
+// Creates HTML element with classname, content and src
 
 const createElement = (elementType, className, content = '', src = '') => {
     let element = elementType === 'img' && !src
@@ -75,13 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
     commentForm.addEventListener('submit', e => {
         e.preventDefault(); // prevent Refresh
 
-        //Date
+// Date
         var date = new Date("April 01,2022");
         var dateString = new Date(date.getTime() - (date.getTimezoneOffset() * 60000))
             .toISOString()
             .split("T")[0];
-
-        //console.log(dateString);
 
         commentsArray.push({
             author: e.target.name.value,
@@ -90,8 +88,10 @@ document.addEventListener('DOMContentLoaded', () => {
             img: ''
         });
 
-        e.target.comment.value = ''; // Clear the comment after posting
-        e.target.name.value = ''; // Clear the name after posting
+// Clear the comment after posting
+        e.target.comment.value = ''; 
+// Clear the name after posting
+        e.target.name.value = ''; 
         displayComment();
     });
 });
