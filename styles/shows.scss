@@ -157,7 +157,6 @@
         @include format-text($lh: 1.125rem, $fs: 1rem);
         text-transform: uppercase;
         width: 14rem;
-        margin: 0 0 1rem 0;
 
         @include tablet {
           display: none;
@@ -207,7 +206,7 @@
         width: 14rem;
     
         @include mobile {
-          @include format-text(1.375rem, 1rem 0 1.5rem 0, 1rem);
+          @include format-text(1.375rem, 0.5rem 0 1.5rem 0, 1rem);
           width: 100%;
         }
       }
@@ -218,7 +217,7 @@
         width: 9.25rem;
     
         @include mobile {
-          @include format-text(1.25rem, 1rem 0 1.5rem 0, 1rem);
+          @include format-text(1.25rem, 0.5rem 0 1.5rem 0, 1rem);
           width: 100%;
         }
       }
