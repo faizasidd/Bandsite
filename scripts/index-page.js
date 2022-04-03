@@ -23,12 +23,19 @@ const commentsArray = [
 
 // Creates HTML comment cards based off the above array
 
-const displayComment = (comments) => {
- 
-        const author = createElement('div', 'comment__author', comments.author);
-        const timestamp = createElement('h3','comment__timestamp', comments.timestamp);
-        const text = createElement('p', 'comment__text', comments.text);
-        const img = createElement('img', 'comment__img', '', comments.img);
+const displayComment = () => {
+    const commentContainer = document.querySelector('.comments__list');
+    commentContainer.innerHTML = ''; // wipe all comments and regenerate
+
+    for (let i = commentsArray.length - 1; i >= 0; i--) {
+        const author = createElement('div',
+            'comment__author', commentsArray[i].author);
+        const timestamp = createElement('h3',
+            'comment__timestamp', commentsArray[i].timestamp);
+        const text = createElement('p',
+            'comment__text', commentsArray[i].text);
+        const img = createElement('img',
+            'comment__img', '', commentsArray[i].img);
 
         const commentCard = createElement('div', 'comment');
 
@@ -38,13 +45,10 @@ const displayComment = (comments) => {
         commentCard.appendChild(text);
 
         commentContainer.appendChild(commentCard);
+    }
 }
 
-const commentContainer = document.querySelector('.comments__list');
-commentContainer.innerHTML = ''; // Wipe all comments and regenerate
-
- //   for (let i = commentsArray.length - 1; i >= 0; i--) {
-// Creates HTML element with classname, content and src
+//  Creates HTML element with classname, content and src
 
 const createElement = (elementType, className, content = '', src = '') => {
     let element = elementType === 'img' && !src
@@ -72,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault(); // prevent Refresh
 
 // Date
-        var date = new Date("April 01,2022");
+        var date = new Date("April 02,2022");
         var dateString = new Date(date.getTime() - (date.getTimezoneOffset() * 60000))
             .toISOString()
             .split("T")[0];
@@ -85,10 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
 // Clear the comment after posting
+
         e.target.comment.value = ''; 
         
 // Clear the name after posting
+
         e.target.name.value = ''; 
+        
         displayComment();
     });
 });

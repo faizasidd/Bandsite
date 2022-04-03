@@ -405,13 +405,13 @@ main {
       @include tablet {
         @include format-text(1.5rem);
         flex-grow: 1;
-        margin-left: 12px;
+        margin-left: 16.8rem;
       }
   
       @include desktop {
         @include format-text(1.5rem);
         flex-grow: 1;
-        margin-left: 12px;
+        margin-left: 16.8rem;
       }
     }
   
@@ -427,7 +427,7 @@ main {
   }
 
   .btn {
-    @include font-styling(300, $white);
+    @include font-styling(500, $white);
     display: block;
     border: none;
     border-radius: 4px;
