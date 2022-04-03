@@ -145,4 +145,208 @@
     width: 45%;
     height: 9.125rem;
   }
+}
+
+.shows {
+  padding: 0 1rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows {
+    padding: 0 1.5rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .shows {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    box-sizing: content-box;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0 9.375rem;
+  }
+}
+.shows__heading {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 500;
+  color: #323232;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 1.5rem 0 0rem 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .shows__heading {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin: 3.5rem 0 3rem 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .shows__heading {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin: 3rem 0;
+  }
+}
+.shows__list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  box-sizing: content-box;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width: 1280px) {
+  .shows__list {
+    width: 45rem;
+    margin-top: 1.5rem;
+  }
+}
+
+.show-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #e1e1e1;
+  margin-bottom: 2rem;
+  height: 5rem;
+  width: 100%;
+}
+.show-card:hover {
+  background-color: #fafafa;
+}
+.show-card:active {
+  background-color: #e1e1e1;
+}
+@media only screen and (max-width: 767px) {
+  .show-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    box-sizing: content-box;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .show-card {
+    width: 45rem;
+  }
+}
+.show-card__label {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 500;
+  color: #afafaf;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  margin: 0;
+  text-transform: uppercase;
+  width: 14rem;
+  margin: 0 0 1rem 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .show-card__label {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .show-card__label {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .show-card__label--venue, .show-card__label--location {
+    width: 9.25rem;
+    display: none;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .show-card__label--venue, .show-card__label--location {
+    width: 9.25rem;
+    display: none;
+  }
+}
+.show-card__labels {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 500;
+  color: #afafaf;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  margin: 0;
+  width: 14rem;
+  margin: 0 0 1rem 0;
+}
+@media only screen and (max-width: 767px) {
+  .show-card__labels {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .show-card__labels--venue, .show-card__labels--location {
+    width: 9.25rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .show-card__labels--venue, .show-card__labels--location {
+    width: 9.25rem;
+  }
+}
+.show-card__date {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 500;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+  width: 14rem;
+}
+@media only screen and (max-width: 767px) {
+  .show-card__date {
+    font-size: 1rem;
+    line-height: 1.375rem;
+    margin: 1rem 0 1.5rem 0;
+    width: 100%;
+  }
+}
+.show-card__text {
+  font-family: "AvenirNext LT Pro";
+  font-weight: 100;
+  color: #000000;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+  width: 9.25rem;
+}
+@media only screen and (max-width: 767px) {
+  .show-card__text {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin: 1rem 0 1.5rem 0;
+    width: 100%;
+  }
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: content-box;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 2rem;
+  width: 100%;
+  margin: 0;
+}
+.labels :last-child {
+  flex-grow: 1;
+}
+@media only screen and (min-width: 1280px) {
+  .labels {
+    height: 8rem;
+  }
 }/*# sourceMappingURL=shows.css.map */
