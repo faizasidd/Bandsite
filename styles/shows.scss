@@ -1,0 +1,241 @@
+@use './partials/breakpoints' as *;
+@use './partials/fonts' as *;
+@use './partials/colors' as *;
+@use './partials/mixins' as *;
+
+* {
+    font-family: 'AvenirNext LT Pro', serif;
+}
+   
+.shows-hero {
+    @include flex($align-items: center, $flex-direction: column, $box-sizing: border-box);
+    background-image: url("../assets/images/hero-shows.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 2.5rem 1rem 0 1rem;
+    position: relative;
+
+    &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.5);
+    top: 0;
+    left: 0;
+    }
+
+    @include tablet {
+    @include flex($flex-wrap: wrap, $box-sizing: border-box);
+    padding: 6rem 1.5rem 4rem 1.5rem;
+    height: 35rem;
+    }
+      
+    @include desktop {
+    @include flex($align-items: flex-start, $flex-wrap: wrap, $box-sizing: border-box);
+    padding: 14rem 9.375rem 0 9.4rem;
+    height: 50rem;
+    }
+      
+    &__container {
+      @include flex(space-between, flex-end, $flex-wrap: wrap);
+    }
+      
+    &__album {
+      @include font-styling(500, $white);
+      @include format-text(1.375rem, 0 0 1.5rem 0, 0.875rem);
+      width: 100%;
+      z-index: 1;
+      
+      @include tablet {
+      @include format-text(2rem, $fs: 1.5rem);
+    }
+      
+      @include desktop {
+      @include format-text(2rem, 0 0 -0.5rem 0, 1.5rem);
+    }
+    }
+      
+    &__heading {
+      @include font-styling(500, $white);
+      @include format-text(2.75rem, $fs: 1.9rem);
+      width: 100%;
+      z-index: 1;
+      
+      @include tablet {
+      @include format-text(4.25rem, $fs: 3.75rem);
+      width: 80%;
+      }
+      
+      @include desktop {
+      @include format-text(3.75rem, $fs: 3.5rem);
+      width: 28rem;
+      margin-bottom: 3rem;
+    }
+    }
+      
+    &__soundcloud {
+        width: 100%;
+        height: 6rem;
+        margin: 1.5rem 0rem;
+        z-index: 1;
+      
+        @include tablet {
+        width: 60%;
+        height: 9rem;
+        }
+      
+        @include desktop {
+        width: 45%;
+        height: 9.125rem;
+        }
+        }
+    }
+
+    .shows {
+      padding: 0 1rem;
+    
+      @include tablet {
+        padding: 0 1.5rem;
+      }
+    
+      @include desktop {
+        @include flex($justify-content: space-between);
+        padding: 0 9.375rem;
+      }
+    
+      &__heading {
+        @include font-styling(500);
+        @include format-text(2rem, 1.5rem 0 0rem 0, 1.5rem);
+    
+        @include tablet {
+          @include format-text(2.75rem, 3.5rem 0 3rem 0, 2.25rem)
+        }
+    
+        @include desktop {
+          @include format-text(2.75rem, 3rem 0, 2.25rem)
+        }
+      }
+    
+      &__list {
+        @include flex($flex-wrap: wrap);
+        margin-bottom: 1rem;
+        
+        @include desktop {
+          width: 45rem;
+          margin-top: 1.5rem;
+        }
+      }
+    }
+    
+    .show-card {
+      @include flex(space-between, center, border-box);
+      border-bottom: 1px solid $mercury;
+      margin-bottom: 2rem;
+      height: 5rem;
+      width: 100%;
+
+      &:hover {
+        background-color: $alabaster;
+      }
+
+      &:active {
+      background-color: $mercury;
+      }     
+
+      @include mobile {
+        @include flex($flex-direction: column);
+        height: auto;
+      }
+    
+      @include desktop {
+        width: 45rem;
+      }
+
+      &__label {
+        @include font-styling(500, $silver);
+        @include format-text($lh: 1.125rem, $fs: 1rem);
+        text-transform: uppercase;
+        width: 14rem;
+
+        @include tablet {
+          display: none;
+        }
+
+        @include desktop {
+          display: none;
+        }
+        
+        &--venue, &--location {
+          @include tablet {
+            width: 9.25rem;
+            display:none;
+          }
+    
+          @include desktop {
+            width: 9.25rem;
+            display:none;
+          }
+        }
+      }
+
+      &__labels {
+        @include font-styling(500, $silver);
+        @include format-text($lh: 1.125rem, $fs: 1rem);
+        width: 14rem;
+        margin: 0 0 1rem 0;
+
+        @include mobile {
+          display: none;
+        }
+        
+        &--venue, &--location {
+          @include tablet {
+            width: 9.25rem;
+          }
+    
+          @include desktop {
+            width: 9.25rem;
+          }
+        }
+      }
+    
+      &__date {
+        @include font-styling(500, $darkblack);
+        @include format-text(1.5rem);
+        width: 14rem;
+    
+        @include mobile {
+          @include format-text(1.375rem, 0.5rem 0 1.5rem 0, 1rem);
+          width: 100%;
+        }
+      }
+    
+      &__text {
+        @include font-styling(100, $darkblack);
+        @include format-text($lh: 1.5rem);
+        width: 9.25rem;
+    
+        @include mobile {
+          @include format-text(1.25rem, 0.5rem 0 1.5rem 0, 1rem);
+          width: 100%;
+        }
+      }
+    }
+    
+    .labels {
+      @include flex($align-items: center, $justify-content: space-between);
+      height: 2rem;
+      width: 100%;
+      margin: 0;
+    
+      & :last-child {
+        flex-grow: 1;
+      }
+
+      @include desktop {
+        height: 8rem;
+      }
+    }
+
+    
