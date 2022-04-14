@@ -41,7 +41,7 @@ axios.get(`https://project-1-api.herokuapp.com/showdates?api_key=${apiKey}`)
      locationLabel.classList.add(['show-card__label'], ['show-card__label--location']);
      locationLabel.innerText = 'Location';
   
-// Show date in a specific format
+// Show date in a Weekday Month Date Year format
 
 const numDate = parseInt(show.date);
 const newDate = new Date(numDate);

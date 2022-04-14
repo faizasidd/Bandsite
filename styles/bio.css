@@ -643,7 +643,7 @@ main {
   background-color: #323232;
   height: 3rem;
   width: 10rem;
-  margin-left: calc(100% - 42.5rem);
+  margin-left: 2rem;
 }
 @media only screen and (max-width: 767px) {
   .btn--ticket {

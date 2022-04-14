@@ -461,7 +461,7 @@ main {
       background-color: $black;
       height: 3rem;
       width: 10rem;
-      margin-left: calc(100% - 42.5rem);
+      margin-left: 2rem;
     
       @include mobile {
         width: 100%;
@@ -473,7 +473,7 @@ main {
       }
     }
   }
-  
+
   .com-form {
     @include flex($flex-wrap: wrap);
     margin: 0;
