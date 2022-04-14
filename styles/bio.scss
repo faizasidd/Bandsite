@@ -398,20 +398,18 @@ main {
     }
   
     &__timestamp {
+      @include flex($justify-content: flex-end);
       @include font-styling(100, $silver);
       @include format-text($lh: 1.375rem, $fs: 0.875rem);
-      display: inline-block;
   
       @include tablet {
         @include format-text(1.5rem);
         flex-grow: 1;
-        margin-left: 16.8rem;
       }
   
       @include desktop {
         @include format-text(1.5rem);
         flex-grow: 1;
-        margin-left: 16.8rem;
       }
     }
   
@@ -475,6 +473,7 @@ main {
       }
     }
   }
+  
   .com-form {
     @include flex($flex-wrap: wrap);
     margin: 0;

@@ -11,10 +11,16 @@ const displayComment = () => {
     axios.get(`https://project-1-api.herokuapp.com/comments?api_key=${apiKey}`)
     .then(response => {
         const commentsArray = response.data;
+        console.log(commentsArray);
     
     for (let i = commentsArray.length - 1; i >= 0; i--) {
         const name = createElement('div',['comment__author'], commentsArray[i].name);
-        const timestamp = createElement('h3',['comment__timestamp'], new Date(commentsArray[i].timestamp).toLocaleDateString('en-ca'));
+        const newDate = new Date(commentsArray[i].timestamp);
+        const month = newDate.getMonth() + 1;
+        const day = newDate.getDate();
+        const year = newDate.getFullYear();
+        const date = month +  '/' + day + '/' + year; //Add all the month day year and append it
+        const timestamp = createElement('h3',['comment__timestamp'], date);
         const comment = createElement('p',['comment__text'], commentsArray[i].comment);
         const img = createElement('img',['comment__img'], '', commentsArray[i].img);
 
