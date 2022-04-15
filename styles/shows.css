@@ -219,9 +219,6 @@
 .show-card:hover {
   background-color: #fafafa;
 }
-.show-card:active {
-  background-color: #e1e1e1;
-}
 @media only screen and (max-width: 767px) {
   .show-card {
     display: flex;
@@ -328,6 +325,10 @@
     margin: 0.5rem 0 1.5rem 0;
     width: 100%;
   }
+}
+
+.show-card__active {
+  background-color: #e1e1e1;
 }
 
 .labels {

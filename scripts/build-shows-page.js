@@ -88,11 +88,33 @@ showCard.addEventListener("click", onClick);
 
 // Clicking on an individual row "selected" or "active"
 
+const elements = document.querySelectorAll('show-card'); 
+
 const onClick = (event) => {
     const clickedElement = event.currentTarget;
-    const element = document.querySelectorAll('div'); 
+    clickedElement.classList.add('show-card__active'); 
+
+    for (let i=0; i<elements.length; i++){
+    if (clickedElement !== elements ){
+    clickedElement.classList.remove('show-card__active');    
+    } else {
     clickedElement.classList.add('show-card__active');
-    //clickedElement.classList.remove('show-card__active');
+    } 
+    }
   }
+
+//   const showCards = document.querySelectorAll('show-card');
+
+//   for (let i=0; i < showCards.length; i++) {
+//     showCards[i].addEventListener("click",() => {
+//     showCards[i].classList.add('show-card__active');
+//      });
+//   }
+//   document.addEventListener('click', (event) => {
+//     for (let i=0; i<showCards.length; i++) {
+//     showCards[i].classList.remove('show-card__active');
+//     }
+//   });
+  
  
     displayShows();

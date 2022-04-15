@@ -138,11 +138,7 @@
       &:hover {
         background-color: $alabaster;
       }
-
-      &:active {
-      background-color: $mercury;
-      }     
-
+ 
       @include mobile {
         @include flex($flex-direction: column);
         height: auto;
@@ -223,6 +219,10 @@
       }
     }
     
+    .show-card__active {
+      background-color: $mercury;
+    }
+
     .labels {
       @include flex($align-items: center, $justify-content: space-between);
       height: 2rem;
