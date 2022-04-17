@@ -38,7 +38,7 @@
 
 // Typography
 
-@mixin font-styling($fw, $c: $black) {
+@mixin font-styling($fw, $c: $primary-background) {
     font-family: 'AvenirNext LT Pro';
     font-weight: $fw;
     color: $c;

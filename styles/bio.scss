@@ -28,7 +28,7 @@ main {
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: $black;
+  background-color: $primary-background;
   width: 100%;
   height: 95px;
 
@@ -68,7 +68,7 @@ main {
   }
 
   &__nav-link {
-    @include font-styling(600, $silver);
+    @include font-styling(600, $secondary-text);
     @include flex(center, center, border-box);
     text-decoration: none;
     font-size: 1rem;
@@ -89,12 +89,12 @@ main {
     }
 
     &--selected {    
-      color: $white;
-      border-bottom: 3px solid $white;
+      color: $primary-text;
+      border-bottom: 3px solid $primary-text;
     }
 
     &:hover {
-      color: $white;
+      color: $primary-text;
     }
   }
 }
@@ -112,7 +112,7 @@ main {
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: rgba($black, 0.5);
+      background-color: rgba($primary-background, 0.5);
       top: 0;
       left: 0;
     }
@@ -122,7 +122,7 @@ main {
     }
   
     @include tablet {
-      height: 52vh;
+      height: 48vh;
     }
   
     @include desktop {
@@ -130,7 +130,7 @@ main {
     }
   
     &__heading {
-      @include font-styling(600, $white);
+      @include font-styling(600, $primary-text);
       width: 576px;
       z-index: 1;
   
@@ -193,7 +193,7 @@ main {
     }
   
     &__quote, &__subheading {
-      @include font-styling(600, $black);
+      @include font-styling(600, $primary-background);
   
       @include mobile {
         @include format-text(1.375rem, 1rem 0 0 0);
@@ -209,7 +209,7 @@ main {
     }
   
     &__author {
-      @include font-styling(600, $black);
+      @include font-styling(600, $primary-background);
   
       @include mobile {
         @include format-text(1.25rem, 0.5rem 0 1rem 0, 0.875rem);
@@ -242,7 +242,7 @@ main {
     }
   
     &__description {
-      @include font-styling(400, $black);
+      @include font-styling(400, $primary-background);
       @include format-text(1.25rem, 0, 0.875rem);
   
       @include mobile {
@@ -261,7 +261,7 @@ main {
 
   .gallery {
     @include flex($box-sizing: border-box, $flex-direction: column);
-    background-color: $alabaster;
+    background-color: $secondary-background;
     width: 100%;
   
     @include mobile {
@@ -357,8 +357,8 @@ main {
   .comment {
     @include flex($justify-content: flex-end, $align-items: flex-start,
     $flex-wrap: wrap, $box-sizing: border-box);
-    border-top: 1px solid $mercury;
-    border-bottom: 1px solid $mercury;
+    border-top: 1px solid $divider-line;
+    border-bottom: 1px solid $divider-line;
     width: 100%;
     margin: -1px 0 0 0;
   
@@ -378,7 +378,7 @@ main {
       border-radius: 50%;
       height: 2.5rem;
       width: 2.5rem;
-      background-color: $mercury;
+      background-color: $divider-line;
       display: inline-block;
       margin-right: 14px;
     }
@@ -399,7 +399,7 @@ main {
   
     &__timestamp {
       @include flex($justify-content: flex-end);
-      @include font-styling(100, $silver);
+      @include font-styling(100, $secondary-text);
       @include format-text($lh: 1.375rem, $fs: 0.875rem);
   
       @include tablet {
@@ -425,7 +425,7 @@ main {
   }
 
   .btn {
-    @include font-styling(500, $white);
+    @include font-styling(500, $primary-text);
     display: block;
     border: none;
     border-radius: 4px;
@@ -450,18 +450,18 @@ main {
     }
   
     &--comment {
-      background-color: $black;
+      background-color: $primary-background;
   
       &:hover {
-        background-color: $darkblack;
+        background-color: $cta-banner-highlight;
       }
     }
   
     &--ticket {
-      background-color: $black;
+      background-color: $primary-background;
       height: 3rem;
       width: 10rem;
-      margin-left: 2rem;
+      margin-left: 2.5rem;
     
       @include mobile {
         width: 100%;
@@ -469,7 +469,7 @@ main {
       }
   
       &:hover {
-        background-color: $darkblack;
+        background-color: $cta-banner-highlight;
       }
     }
   }
@@ -491,11 +491,11 @@ main {
       border-radius: 50%;
       height: 3rem;
       width: 3rem;
-      background-color: $mercury;
+      background-color: $divider-line;
     }
   
     &__label {
-      @include font-styling(300, $silver);
+      @include font-styling(300, $secondary-text);
       @include format-text($lh: 1.125rem, $fs: 0.8125rem);
       text-transform: uppercase;
       min-width: calc(100% - 4rem);
@@ -509,7 +509,7 @@ main {
       box-sizing: border-box;
       min-width: 14rem;
       height: 3.375rem;
-      border: 1px solid $mercury;
+      border: 1px solid $divider-line;
       border-radius: 4px;
       margin-bottom: 1rem;
       margin-left: 1rem;
@@ -523,7 +523,7 @@ main {
       @include flex($box-sizing: border-box);
       min-width: 14rem;
       height: 6.75rem;
-      border: 1px solid $mercury;
+      border: 1px solid $divider-line;
       border-radius: 4px;
       margin: 0 0 0.75rem 4rem;
       padding: 0.75rem;
@@ -538,19 +538,19 @@ main {
       }
   
       &::placeholder {
-        color: $silver
+        color: $secondary-text
       }
     }
   
     &__name:focus, &__comment:focus {
       outline: none !important;
-      border: 2px solid $black;
+      border: 2px solid $primary-background;
     }
   }
  
   .footer {
     @include flex($flex-wrap: wrap);
-    background-color: $black;
+    background-color: $primary-background;
   
     @include mobile {
       flex-direction: column;
@@ -577,7 +577,7 @@ main {
     }
   
     &__heading {
-      @include font-styling(600, $white);
+      @include font-styling(600, $primary-text);
       width: 14rem;
   
       @include mobile {
@@ -652,7 +652,7 @@ main {
     }
   
     &__name, &__company {
-      @include font-styling(600, $white);
+      @include font-styling(600, $primary-text);
       @include format-text(1.5rem, 0);
   
       @include mobile {
@@ -670,7 +670,7 @@ main {
     }
   
     &__address, &__booking {
-      @include font-styling(400, $white);
+      @include font-styling(400, $primary-text);
       @include format-text(1.25rem, 0, 0.875rem);
   
       @include mobile {
@@ -680,7 +680,7 @@ main {
     }
   
     &__email {
-      @include font-styling(400, $white);
+      @include font-styling(400, $primary-text);
     
       @include mobile {
         @include format-text(1.25rem, 1rem 0 0 0, 0.75rem);
@@ -721,7 +721,7 @@ main {
     }
   
     &__text {
-      @include font-styling(400, $white);
+      @include font-styling(400, $primary-text);
       @include format-text(1.25rem, 0, 0.875rem);
   
       @include mobile {
