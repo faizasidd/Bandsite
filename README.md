@@ -1,2 +1,2 @@
 # Bandsite
-Bandsite is a project for an up-and-coming band using HTML, SASS and JavaScript.
+Bandsite is a responsive website for an up-and-coming band which is built using HTML, SASS and JavaScript along with the Band Site API.
